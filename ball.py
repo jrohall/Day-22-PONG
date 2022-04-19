@@ -34,24 +34,38 @@ class Ball:
                 ang1 = self.ball.heading() - 315
                 self.ball.setheading(ang1)
                 self.ball.forward(8)
-            elif self.ball.ycor() >= 350 and self.ball.heading()<0:
-                 ang2a = self.ball.heading() - 45
-                 self.ball.setheading(ang2a)
+            elif self.ball.ycor() >= 350 and self.ball.heading() <= 120 and self.ball.heading() >= 90:
+                 #ang2a = self.ball.heading() + 45
+                 self.ball.setheading(240)
                  self.ball.forward(8)
-            elif self.ball.ycor() >= 350 and self.ball.heading()>90:
-                 ang2b = self.ball.heading() + 45
-                 self.ball.setheading(ang2b)
+            elif self.ball.ycor() >= 350 and self.ball.heading() >= 60 and self.ball.heading() < 90:
+                 #ang2b = self.ball.heading() - 45
+                 self.ball.setheading(300)
                  self.ball.forward(8)
-            elif self.ball.ycor() >= 350 and self.ball.heading()>0:
-                 ang2b = self.ball.heading() + 315
-                 self.ball.setheading(ang2b)
+            elif self.ball.ycor() >= 350 and self.ball.heading() > 120:
+                 #ang2c = self.ball.heading() + 45
+                 self.ball.setheading(250)
                  self.ball.forward(8)
-            elif self.ball.ycor() <= -350:
-                ang3 = self.ball.heading() + 45
-                self.ball.setheading(ang3)
+            elif self.ball.ycor() >= 350 and self.ball.heading() < 60:
+                 #ang2d = self.ball.heading() - 45
+                 self.ball.setheading(330)
+                 self.ball.forward(8)
+            elif self.ball.ycor() <= -350 and self.ball.heading() > 240 and self.ball.heading() <= 270:
+                ang3c = self.ball.heading() - 45
+                self.ball.setheading(ang3c)
                 self.ball.forward(8)
-            else:
-                pass
+            elif self.ball.ycor() <= -350 and self.ball.heading() > 270 and self.ball.heading() < 300:
+                ang3c = self.ball.heading() + 45
+                self.ball.setheading(ang3c)
+                self.ball.forward(8)
+            elif self.ball.ycor() <= -350 and self.ball.heading() >=270:
+                ang3a = self.ball.heading() + 45
+                self.ball.setheading(ang3a)
+                self.ball.forward(8)
+            elif self.ball.ycor() <= -350 and self.ball.heading() < 270:
+                ang3b = self.ball.heading() - 45
+                self.ball.setheading(ang3b)
+                self.ball.forward(8)
  
 #            elif self.ball.ycor() >= 350 and self.ball.heading() < 90 and self.ball.heading() > 0:
 #                newTopAngle = self.ball.heading() + 45
